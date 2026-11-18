@@ -1,0 +1,74 @@
+/* 브라우저 기본 CSS 리셋 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 실제 적용 CSS */
+body{
+  background-color: hsl(212, 45%, 89%);
+}
+
+main{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100vh;
+}
+
+.card{
+  font-family: "Outfit", sans-serif;
+  font-size:15px;
+
+  box-sizing: border-box;
+  display:flex;
+  width:320px;
+  /* height:499px; 상대값*/
+  background-color:white;
+  border-radius:20px;
+  padding: 16px 16px 40px 16px;
+  margin:0;
+  gap:24px;
+  flex-direction: column;
+  
+}
+
+img{
+  width:288px;
+  /* 부모 요소를 넘지 않게 */
+  max-width: 100%; 
+  height:auto;
+  border-radius: 10px;
+  display:block;
+}
+
+h1{
+  font-weight:700;
+  font-size:22px;
+  line-height:1.2;
+  text-align: center;
+  color:hsl(218, 44%, 22%);
+}
+
+.textbox{
+  display:flex;
+  gap:16px;
+  flex-direction: column;
+}
+
+p{
+  font-weight:400;
+  font-size:15px;
+  color: hsl(216, 15%, 48%);
+
+  line-height:1.4;
+  letter-spacing:0.2px;
+
+  text-align: center;
+}
