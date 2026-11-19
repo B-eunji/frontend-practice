@@ -8,6 +8,28 @@ Frontend Mentor에서 제공하는 QR Code Component 디자인을 순수 HTML/CS
 - **사용 기술:** HTML5, CSS3
 - **개발 환경:** VS Code, Chrome DevTools, Live Server
 - **디자인 도구:** Figma
+## 구현 결과
+
+### 완성 화면
+
+![QR Code Component 완성 화면](./images/screenshot.png)
+
+### 배포 링크
+
+[Live Demo](https://b-eunji.github.io/frontend-practice/html-css/01-qr-code/)
+
+## Built with
+
+- HTML5
+- CSS3
+- Flexbox
+- Responsive Web Design
+
+## Tools
+
+- Figma
+- Visual Studio Code
+- Chrome DevTools
 
 ## 학습 목표
 
