@@ -1,100 +1,65 @@
-# Frontend Mentor - QR code component
+# QR Code Component
 
-![Design preview for the QR code component coding challenge](./preview.jpg)
+Frontend Mentor에서 제공하는 QR Code Component 디자인을 순수 HTML/CSS로 구현한 실습 프로젝트입니다.
 
-## Welcome! 👋
+## 프로젝트 정보
 
-Thanks for checking out this front-end coding challenge.
+- **실습 출처:** [Frontend Mentor — QR Code Component](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)
+- **사용 기술:** HTML5, CSS3
+- **개발 환경:** VS Code, Chrome DevTools, Live Server
+- **디자인 도구:** Figma
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## 학습 목표
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+- 시맨틱 HTML을 활용한 구조 설계
+- CSS Box Model과 Flexbox를 이용한 레이아웃 구현
+- Figma 디자인 속성 분석 및 CSS 적용
+- 반응형 웹페이지 구현
+- Chrome DevTools를 활용한 스타일 검증
 
-## The challenge
+## 주요 구현 내용
 
-Your challenge is to build out this QR code component and get it looking as close to the design as possible.
+- QR 이미지, 제목, 설명으로 구성된 카드 UI 구현
+- Flexbox를 활용한 화면 중앙 정렬
+- 중첩 Flexbox로 이미지와 텍스트 사이의 간격 관리
+- Google Fonts의 Outfit 글꼴 적용
+- `width`, `max-width`를 활용한 유동적인 카드 크기 설정
+- CSS Reset으로 브라우저 기본 여백 초기화
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## 학습 및 문제 해결
 
-### Want some support on the challenge? 
+### 1. HTML 구조 설계
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+`main`, `div`, `h1`, `p` 등 HTML 요소의 의미와 역할을 구분하고, 불필요한 태그를 추가하지 않도록 구조를 설계했습니다.
 
-## Where to find everything
+### 2. Flexbox 간격 관리
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+처음에는 카드의 모든 요소에 동일한 `gap`이 적용되어 디자인과 간격이 달랐습니다.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+제목과 설명을 별도의 그룹으로 묶고, 중첩 Flexbox를 활용해 이미지와 텍스트 그룹 사이의 24px, 제목과 설명 사이의 16px 간격을 구분했습니다.
 
-If you would like the Figma design file to gain experience using professional tools and build more accurate projects faster, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### 3. 브라우저 기본 스타일 문제
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+제목과 문단에 기본적으로 적용되는 `margin`이 디자인과의 간격 차이를 발생시킬 수 있다는 점을 학습했습니다.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+CSS Reset을 적용하고 Chrome DevTools에서 Box Model과 Flexbox 간격을 확인했습니다.
 
-## Using AI coding assistants
+### 4. 반응형 카드 구현
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+초기에는 카드 너비를 320px로 고정했으나, 작은 화면에서도 카드 바깥 여백을 확보할 수 있도록 개선했습니다.
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+부모 요소의 `padding`과 카드의 `width: 100%`, `max-width: 320px`을 조합했습니다.
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+## 배운 점
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+- HTML 태그는 디자인보다 콘텐츠의 의미를 기준으로 선택해야 한다.
+- Figma의 수치를 그대로 복사하는 것보다 레이아웃의 구조와 관계를 이해하는 것이 중요하다.
+- `gap`과 `margin`은 서로 다른 방식으로 요소 간격에 영향을 준다.
+- Flexbox의 정렬 속성은 부모 요소의 크기와 배치 방향에 따라 동작한다.
+- DevTools를 통해 실제 적용된 CSS 속성과 레이아웃을 확인할 수 있다.
 
-## Building your project
+## 향후 보완할 점
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
-
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
-
-## Deploying your project
-
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
-
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
-
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+- HTML/CSS 구조를 힌트 없이 독립적으로 설계하는 능력 강화
+- Flexbox와 Box Model의 활용 숙련도 향상
+- 다양한 화면 크기에서의 반응형 설계 경험 확대
