@@ -41,8 +41,111 @@ main{
   /* 텍스트 */
   font-family: "Figtree", sans-serif;
   font-size: 1rem;
+  color:hsl(0, 0%, 7%);
 }
+
+.card > img{
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+.textbox{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  width: 100%;
+}
+
+.textbox span{
+  display: inline-block;
+
+  padding: 4px 12px;
+
+  background-color: hsl(47, 88%, 63%);
+  border-radius: 4px;
+
+  
+  font-weight: 800;
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+
+.textbox time{
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+
+.textbox h1{
+  width: 100%;
+
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+
+.textbox h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.textbox h1 a:hover{
+  color: hsl(47, 88%, 63%);
+}
+.textbox h1 a:focus-visible{
+  outline:auto;
+
+}
+
+.textbox p{
+  width:100%;
+
+  font-weight: 500;
+  line-height: 150%;
+  color:hsl(0, 0%, 42%);
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile img{
+  width: 32px;
+  height: 32px;
+}
+
+.profile p{
+  font-weight: 800;
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+
 
 .attribution{
   display:none;
+}
+
+@media(max-width:375px){
+  .textbox span{
+    font-size: 0.75rem;
+  }
+  .textbox time{
+  font-size: 0.75rem;
+  }
+
+  .textbox h1{
+  font-size: 1.25rem;
+  }
+
+  .textbox p{
+  font-size: 0.875rem;
+  }
 }
