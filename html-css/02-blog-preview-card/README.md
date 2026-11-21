@@ -1,106 +1,92 @@
-# Frontend Mentor - Blog preview card
+# Blog Preview Card
 
-![Design preview for the Blog preview card coding challenge](./preview.jpg)
+Frontend Mentor의 **Blog preview card** 챌린지를 HTML과 CSS로 구현한 프로젝트입니다.
 
-## Welcome! 👋
+Figma 디자인을 분석해 카드 레이아웃을 구현하고, 반응형 스타일과 키보드 접근성을 적용했습니다.
 
-Thanks for checking out this front-end coding challenge.
+## 구현 결과
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+### 완성 화면
 
-## The challenge
+![Blog Preview Card 완성 화면](./assets/images/screenshot.png)
 
-Your challenge is to build out this blog preview card and get it looking as close to the design as possible.
+### 배포 링크
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+[Live Demo](https://b-eunji.github.io/frontend-practice/html-css/02-blog-preview-card/)
 
-Your users should be able to:
+### 원본 챌린지
 
-- See hover and focus states for all interactive elements on the page
+[Frontend Mentor - Blog Preview Card](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS)
 
-### Want some support on the challenge? 
+## Built with
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+- HTML5
+- CSS3
+- Flexbox
+- CSS Media Queries
+- CSS Pseudo-classes (`:hover`, `:focus-visible`)
 
-## Where to find everything
+## Tools
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- Figma
+- Visual Studio Code
+- Chrome DevTools
+- Git / GitHub
+- GitHub Pages
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+## 주요 구현 내용
 
-This is a Free+ challenge, so you can also download the Figma design file from the same place you got this starter code. Working from it gives you exact values for styles like `font-size`, `padding` and `margin`, and practice with professional tools.
+### 1. 시맨틱 HTML 구조
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+- `main`, `article`로 주요 콘텐츠와 블로그 카드를 구분했습니다.
+- `time`의 `datetime` 속성으로 게시 날짜를 표현했습니다.
+- 제목을 링크로 구성하고, 장식용 이미지에 빈 `alt` 속성을 적용했습니다.
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+### 2. Figma 기반 레이아웃 구현
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Figma의 Auto Layout을 Flexbox로 구현했습니다.
+- 카드, 텍스트 그룹, 작성자 프로필의 간격을 각각 분리했습니다.
+- `width`와 `max-width`를 조합해 화면 너비에 따라 카드가 조절되도록 작성했습니다.
 
-## Using AI coding assistants
+### 3. 반응형 스타일
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+- 모바일과 데스크톱 디자인의 글자 크기 차이를 미디어 쿼리로 반영했습니다.
+- 화면 너비에 따라 카드와 텍스트가 자연스럽게 줄어들도록 구성했습니다.
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+### 4. 링크 상호작용
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+- `:hover`로 제목 링크에 마우스를 올렸을 때 색상이 변경되도록 구현했습니다.
+- `:focus-visible`과 `outline`으로 키보드 포커스 위치를 표시했습니다.
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+## 학습 및 문제 해결
 
-## Building your project
+### Figma Auto Layout과 Flexbox의 차이
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+처음에는 Figma에서 Auto Layout이 적용된 모든 요소에 Flexbox가 필요하다고 생각했습니다.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+Learning 배지처럼 내부 콘텐츠가 텍스트 하나인 경우에는 `inline-block`과 `padding`만으로도 디자인을 구현할 수 있다는 점을 배웠습니다.
 
-## Deploying your project
+### CSS 상속과 정렬 범위
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+부모 요소의 `align-items`가 자식 요소에도 상속되는지 확인했습니다.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+`align-items`는 상속되지 않으며, 각 Flex 컨테이너의 직접적인 자식 요소에 적용된다는 점을 학습했습니다.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
+반면 `font-family`, `color` 등은 상속을 활용해 중복 선언을 줄였습니다.
 
-## Create a custom `README.md`
+### 반응형 기준점 결정
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+모바일과 데스크톱의 글자 크기 차이를 미디어 쿼리로 구현했습니다.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+화면 너비를 조절하면서 자연스러운 줄바꿈과 레이아웃 오류를 구분하는 방법을 학습했습니다.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+## 배운 점
 
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+- 시맨틱 HTML을 활용한 카드 구조 작성
+- Figma 디자인 속성을 CSS로 변환하는 방법
+- Flexbox의 중첩 구조와 정렬 범위
+- CSS 상속과 선택자의 적용 범위
+- 반응형 미디어 쿼리 작성
+- Hover와 Focus 상태의 차이
+- CSS 속성을 역할별로 구분해 작성하는 방법
